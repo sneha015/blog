@@ -1,11 +1,39 @@
-<p>
-    <center><strong>Title:</strong>
-	<%= @post.title %></center>
-</p>
+<body>
 
-<p>
-	<strong>Text:</strong>
-	<%= @post.text %>
-</p>
-<%= link_to 'Back', posts_path %>
-| <%= link_to 'Edit', edit_post_path(@post) %>
+<h1><center>Sneha's Blog</h1>
+
+	
+		
+		<div style="font-family:verdana;padding:20px;border-radius:10px;border:5px solid #666666;">
+		  <div style="font-size: 1.2em;">
+			<p>
+			  <strong> Title: </strong>
+			  <%= @post.title %>
+			</p>
+			 
+			<p>
+			  <strong>Text:</strong>
+			  <%= @post.text %></center>
+			</p>
+		</div>
+		</div><br>	
+	
+
+	
+		<div style="font-family:verdana;padding:20px;border-radius:10px;border:5px solid #666666;">
+		
+			<h2>Comments:</h2>
+			<%= render @post.comments %>
+			 
+			<h2>Add a comment:</h2>
+			<%= render "comments/form" %>
+
+		</div><br>	
+	
+
+
+</body>
+ <div style="text-align:right;font-size: 1.2em;">
+<%= link_to 'Edit Post', edit_post_path(@post) %> |
+<%= link_to 'Back to Posts', posts_path %>
+</div>
