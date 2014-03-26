@@ -1,38 +1,189 @@
 @import "bootstrap";
 
-body 
+
+/* typography */
+body
 {
+    background: url(/assets/pink.jpg);
 	color:#40B3DF;
-	background-color:#cccccc;
+
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
 }
 
+p
+{
+font-size: 1.3em;	
+}
+/*header animation */
 h1
 {
-	font-family:verdana;
-	padding:5px;
-	border-radius:10px;
-	border:5px solid #666666;
+color:red;
+font-size: 2em;
+position:relative;
+-webkit-animation:myfirst 15s linear 2s infinite alternate; /* Chrome, Safari, Opera */
+animation:myfirst 15s linear 2s infinite alternate;
 }
 
-
-table,th,td
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst
 {
-border:1px solid black;
-border-collapse:collapse
+0%   {color:red; left:0px; top:0px;}
+25%  {color:yellow; left:740px; top:0px;}
+50% {color:blue; left:0px; top:0px;}
+75%  {color:green; left:740px; top:0px;}
+100%{color:red; left:0px; top:0px;}
 }
+
+/* Standard syntax */
+@keyframes myfirst
+{
+0%   {color:red; left:0px; top:0px;}
+25%  {color:yellow; left:740px; top:0px;}
+50% {color:blue; left:0px; top:0px;}
+75%  {color:green; left:740px; top:0px;}
+100%{color:red; left:0px; top:0px;}
+}
+
+/*table settings*/
 
 table
 {
-	width:600px
+	width:850px;
+	margin-left:15px;	
 }
-
-th
-{
-  background-color:#666666
-}
-
 
 tr 
 {
 font-size: 1.4em;
 }
+
+
+
+/* container layout*/
+
+#container
+{
+width:900px;
+margin:0 auto;
+overflow-y:auto;
+overflow-x:hidden;
+}
+#header
+{
+height:110px;
+margin-top:5px;
+}
+#nav
+{
+height:30px;
+}
+#nav ul
+{
+list-style:none;
+height:30px;
+padding:0px;
+margin:0px;
+}
+#nav ul li
+{
+float:left;
+margin:10px;
+}
+#top_block{
+background: url(/assets/top.jpg);
+	color:#E2B82F;
+	font-face:"Fantasy";
+	background-size:900px 400px;
+	background-repeat:no-repeat;
+	opacity: 0.8;	
+}
+
+#block{
+	background: rgb(54, 25, 25); /* Fall-back for browsers that don't
+                                    support rgba */
+    background: rgba(54, 25, 25, .7);
+}
+#main
+{
+overflow:auto;
+margin-top:5px;
+width:900px;
+}
+#main_left
+{
+margin-top:10px;
+width:900px;
+min-height:300px;
+
+}
+#main_right
+{
+float:left;
+width:00;
+min-height:400px;
+}
+#margin
+{
+margin-left:80px;
+}
+#main_form
+{
+margin-left:320px;
+}
+#footer
+{
+height:40px;
+}
+
+
+/* nav bar button */
+
+.button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fff6af;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fff6af;
+	box-shadow:inset 0px 1px 0px 0px #fff6af;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23) );
+	background:-moz-linear-gradient( center top, #ffec64 5%, #ffab23 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23');
+	background-color:#ffec64;
+	-webkit-border-top-left-radius:15px;
+	-moz-border-radius-topleft:15px;
+	border-top-left-radius:15px;
+	-webkit-border-top-right-radius:15px;
+	-moz-border-radius-topright:15px;
+	border-top-right-radius:15px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:40px;
+	line-height:40px;
+	width:86px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #ffee66;
+}
+.button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64) );
+	background:-moz-linear-gradient( center top, #ffab23 5%, #ffec64 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64');
+	background-color:#ffab23;
+}.button:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+

@@ -1,5 +1,6 @@
+<div id="container">
 
-
+<div id="margin">
 <%= form_for :post, url: posts_path do |f| %>
   <% if @post.errors.any? %>
   <div id="error_explanation">
@@ -12,14 +13,16 @@
     </ul>
   </div>
   <% end %>
-    
+</div>
+
+<div id="main_form">  
   <p>
-    <div style="font-size: 1.2em;"><%= f.label :title %><br>
+    <div style="font-size:3em;"><%= f.label :title %>
     <%= f.text_field :title %></div>
   </p>
  
   <p>
-    <div style="font-size: 1.2em;"><%= f.label :text %><br>
+    <div style="font-size:3em;"><%= f.label :text %>
     <%= f.text_area :text %></div>
   </p>
  
@@ -27,4 +30,7 @@
     <%= f.submit %>
   </p>
 <% end %>
+
+</div>
+</div>
 

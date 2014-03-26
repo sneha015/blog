@@ -1,31 +1,52 @@
-<body>
-<h1><center>Sneha's Blog</h1>
 
-<h2>Listing posts</h2>
- 
-<table>
+<div id="container">
+<div id="top_block">
+<div id="header">
+<br>
+<div style="font-family:Fantasy, Comic Sans;">
+<h1>Sneha's Blog</h1>
+</div>
+</div>
+
+
+<div id="nav">
+<ul>
+
+
+<li class="button"><%= link_to 'NEW POST', new_post_path %></li>
+</ul>
+</div><br>
+</div>
+
+
+<div id="main">
+  <div id="block">
+<div id="main_left">
+  <h2><center>Posts</h2>
+  <table>
   
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  
  
   <% @posts.each do |post| %>
     <tr>
-      <td><%= post.title %></td>
-      <td><%= post.text %></td>
-      <td><%= link_to 'Show', post %></td>
-      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+      <td style="width:140px;height:20px;display:inline-block;overflow:hidden;"><%= link_to post.title, post %></td>
+      
+      <td style="width:520px;height:20px;display:inline-block;overflow:hidden;"><%= link_to post.text, post %></td>
+      
+      <td style="width:60px;height:20px;"><%= link_to 'Edit', edit_post_path(post) %></td> 
+
       <td><%= link_to 'Delete', post_path(post),
                     method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
-</table><br><br>
-
-<div style="text-align:right;font-size: 1.2em;">
-  <%= link_to 'New Post', new_post_path %>
+</table><br>
 </div>
-</body>
+  
+
+
+</div>
+
+
+
+
+

@@ -1,14 +1,57 @@
 
 
-<h1><center>Sneha's Blog</h1>
+<div id="container">
+<div id="top_block">
 
-<div style="font-family:verdana;padding:5px;border-radius:10px;border:5px solid #666666;">
-<h2>Edit post</h2>
- 
-<%= render 'form' %> 
+	
 
+<div id="header">
+<br>
+<div style="font-family:Fantasy, Comic Sans;">
+<h1>Sneha's Blog</h1>
+</div>
+</div>
+
+
+<div id="nav">
+<ul>
+
+
+
+<li class="button"><%= link_to 'POSTS', posts_path %></li>
+</ul>
+</div><br>
+</div>
+
+
+<div id="main">
+	<div id="block">
+<div id="main_left">
+	<h2>Edit post</h2>
+	<%= render 'form' %> 
+</div>
 
 </div>
-<div style="text-align:right;font-size: 1.2em;">	
-<%= link_to 'Back', posts_path %>
 </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

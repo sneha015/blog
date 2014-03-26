@@ -1,39 +1,57 @@
-<body>
+<div id="container">
 
-<h1><center>Sneha's Blog</h1>
+	<div id="top_block">
 
-	
-		
-		<div style="font-family:verdana;padding:20px;border-radius:10px;border:5px solid #666666;">
-		  <div style="font-size: 1.2em;">
-			<p>
-			  <strong> Title: </strong>
-			  <%= @post.title %>
-			</p>
-			 
-			<p>
-			  <strong>Text:</strong>
-			  <%= @post.text %></center>
-			</p>
+		<div id="header">
+			<br><div style="font-family:Fantasy, Comic Sans;">
+			<h1>Sneha's Blog</h1>
+			</div>
 		</div>
-		</div><br>	
-	
 
-	
-		<div style="font-family:verdana;padding:20px;border-radius:10px;border:5px solid #666666;">
-		
-			<h2>Comments:</h2>
+		<div id="nav">
+			<ul>
+			<li class="button"><%= link_to 'EDIT', edit_post_path(@post) %></li>
+			<li class="button"><%= link_to 'POSTS', posts_path %></li>
+			</ul>
+		</div><br>
+	</div>
+
+
+	<div id="main">
+	<div id="block">
+
+		<div id="main_left">
+			<div id="margin">
+			<p>
+			<br><strong style="font-size:1.2em;"> Title: </strong>
+				<%= @post.title %>
+			</p>		 
+			<p>
+				<%= @post.text %></center>
+			</p>
+			</div>
+		</div><br>
+
+		<div id="main_left">
+			<div id="margin">
+			
+			<% if @post.comments.any? %>
+			<h3>Comments:</h3>
+			<% end %>
 			<%= render @post.comments %>
-			 
-			<h2>Add a comment:</h2>
+					 
+			<h3>Add a comment:</h3>
 			<%= render "comments/form" %>
+			</div>
+		</div>
 
-		</div><br>	
-	
+	</div>
+	</div>	
 
 
-</body>
- <div style="text-align:right;font-size: 1.2em;">
-<%= link_to 'Edit Post', edit_post_path(@post) %> |
-<%= link_to 'Back to Posts', posts_path %>
 </div>
+
+
+
+
+
